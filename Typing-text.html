@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerhana bulan</title>
+<style>
+  body {
+    background-color: #3d2a26;
+  }
+
+  .container {
+    display: flex;
+    margin-left: 35%;
+    margin-top: 20%;
+  }
+  .bulan {
+    width: 150px;
+    height: 150px;
+    background: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5px lightyellow,
+    0 0 25px lightyellow,
+    0 0 50px lightyellow;
+    0 0 200px lightyellow;
+    //kanan 0 bawah 0 5px
+  }
+  .bayangan {
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%;
+    margin-left: 20px;
+    opacity: 0.7;
+    animation: animasi 15s 2;
+  }
+  @keyframes animasi {
+    0% {
+      margin-left: 20px;
+    }
+    50% {
+      margin-left: -150px;
+    }
+    100 % {
+      margin-left: 20px;
+    }
+  }
+</style>
+
+</head>
+<body>
+<div class="container">
+<div class="bulan"></div>
+<div class="bayangan"></div>
+</div>
+</body>
+</html>
