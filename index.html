@@ -2,56 +2,61 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerhana bulan</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<title>Typing text with javascript</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
   body {
-    background-color: #3d2a26;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
 
-  .container {
-    display: flex;
-    margin-left: 35%;
-    margin-top: 20%;
+  .iam {
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    font-family: sans-serif;
   }
-  .bulan {
-    width: 150px;
-    height: 150px;
-    background: lightyellow;
-    border-radius: 50%;
-    box-shadow: 0 0 5px lightyellow,
-    0 0 25px lightyellow,
-    0 0 50px lightyellow;
-    0 0 200px lightyellow;
-    //kanan 0 bawah 0 5px
-  }
-  .bayangan {
-    width: 150px;
-    height: 150px;
-    background: black;
-    border-radius: 50%;
-    margin-left: 20px;
-    opacity: 0.7;
-    animation: animasi 15s 2;
-  }
-  @keyframes animasi {
-    0% {
-      margin-left: 20px;
-    }
-    50% {
-      margin-left: -150px;
-    }
-    100 % {
-      margin-left: 20px;
-    }
+  .text {
+    color: white;
+    border-right: 2px solid #e9ccb1;
+    font-size: 30px;
+    font-family: sans-serif;
   }
 </style>
-
 </head>
 <body>
-<div class="container">
-<div class="bulan"></div>
-<div class="bayangan"></div>
+<div class="iam">
+I am
 </div>
+<div class="text"></div>
+<script>
+var typing = new Typed (".text", {
+strings: ["Student", "Programmer", "Web Developer"],
+// untuk mwngatur kata yg ditampilkan
+/*untuk mengatur kata yang akan ditampilkan(100 miliseconds)
+   semakin kecil angkanya maka semakin dikit  huruf yg ditampilkan*/
+
+typeSpeed: 100,
+
+/*untuk mengatur kecepatan efek mengetik.
+semakin kecil angkanya semakin cepat teks yg diketik.*/
+backSpeed: 40,
+loop: true,
+//kondisi dapat diulang
+
+delaySpeed: 100,
+//waktu delay 100 ms
+});
+</script>
 </body>
 </html>
